@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chan Muslim Kitchen | Homemade With Love</title>
+    <style>
+        :root {
+            --primary-color: #1b4d3e; /* 深绿色调 */
+            --secondary-color: #f4f1ea; /* 米白底色 */
+            --text-color: #333333;
+            --accent-color: #e67e22; /* 橙色强调 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-style: italic;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Action Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+
+        .btn-grab {
+            background-color: #00b14f; /* Grab Green */
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366; /* WhatsApp Green */
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+            opacity: 0.9;
+        }
+
+        /* Section Styling */
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Menu Section */
+        .menu-list {
+            list-style: none;
+        }
+
+        .menu-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .feature-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Info Style for Contact/Map */
+        .info-text {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .map-responsive {
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .map-responsive iframe {
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+            border:0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <img src="logo.jpeg" alt="Chan Muslim Kitchen Logo" class="logo">
+            <h1>Chan Muslim Kitchen</h1>
+            <p>Homemade With Love</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-grab">💚 Order on Grab</a>
+                <a href="https://wa.me/6586696811" class="btn btn-whatsapp" target="_blank">💬 WhatsApp Us</a>
+            </div>
+        </header>
+
+        <!-- About Us -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Chan Muslim Kitchen! We are proudly Muslim-owned and dedicated to bringing you the finest homemade traditional dishes prepared with love and the freshest ingredients. Taste the rich, authentic heritage in every bite.</p>
+        </section>
+
+        <!-- Signature Menu -->
+        <section id="menu">
+            <h2>Signature Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item">🍜 Sarawak Laksa</li>
+                <li class="menu-item">🍜 Lor Mee</li>
+            </ul>
+        </section>
+
+        <!-- Food Gallery -->
+        <section id="gallery">
+            <h2>Food Gallery</h2>
+            <div class="gallery">
+                <img src="laksa.jpeg" alt="Sarawak Laksa" class="gallery-item">
+                <img src="lormee.jpeg" alt="Lor Mee" class="gallery-item">
+                <img src="logo.jpeg" alt="Chan Muslim Kitchen Featured Banner" class="gallery-item">
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">✔ Muslim Owned</div>
+                <div class="feature-card">✔ Homemade</div>
+                <div class="feature-card">✔ Fresh Ingredients</div>
+                <div class="feature-card">✔ Affordable</div>
+            </div>
+        </section>
+
+        <!-- Google Map -->
+        <section id="location">
+            <h2>Our Location</h2>
+            <p class="info-text">📍 <strong>Address:</strong> Blk 372 Hougang Street 31</p>
+            <div class="map-responsive">
+                <iframe src="https://maps.google.com/maps?q=Blk%20372%20Hougang%20Street%2031&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact & Opening Hours</h2>
+            <p class="info-text">📞 <strong>Phone:</strong> <a href="tel:86696811" style="color: var(--text-color);">86696811</a></p>
+            <p class="info-text">✉ <strong>Email:</strong> <a href="mailto:chanmuslimkitchen@gmail.com" style="color: var(--text-color);">chanmuslimkitchen@gmail.com</a></p>
+            <p class="info-text" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee;">
+                ⏳ <strong>Opening Hours:</strong><br>
+                Saturday & Sunday: 8:30 AM - 5:30 PM
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Chan Muslim Kitchen. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
