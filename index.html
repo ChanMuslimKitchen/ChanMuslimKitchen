@@ -6,10 +6,10 @@
     <title>Chan Muslim Kitchen | Homemade With Love</title>
     <style>
         :root {
-            --primary-color: #1b4d3e; /* 深绿色调 */
-            --secondary-color: #f4f1ea; /* 米白底色 */
-            --text-color: #333333;
-            --accent-color: #e67e22; /* 橙色强调 */
+            --primary-color: #1b4d3e; /* Deep elegant green */
+            --secondary-color: #f5f2eb; /* Warm cream background */
+            --text-color: #2b2b2b;
+            --accent-color: #00b14f; /* Grab Green */
         }
 
         * {
@@ -23,34 +23,37 @@
             background-color: var(--secondary-color);
             color: var(--text-color);
             line-height: 1.6;
+            padding: 20px 10px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            overflow: hidden;
+            padding: 30px 20px;
         }
 
-        /* Header Section */
+        /* Header Styling */
         header {
             text-align: center;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .logo {
-            max-width: 180px;
+            max-width: 150px;
             height: auto;
             border-radius: 50%;
             margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         header h1 {
             color: var(--primary-color);
             font-size: 2.2rem;
+            font-weight: 700;
             margin-bottom: 5px;
         }
 
@@ -58,144 +61,163 @@
             font-style: italic;
             color: #666;
             font-size: 1.1rem;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         /* Action Buttons */
         .cta-buttons {
             display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 25px;
-            border-radius: 25px;
+            width: 100%;
+            max-width: 280px;
+            padding: 14px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            min-width: 180px;
         }
 
         .btn-grab {
-            background-color: #00b14f; /* Grab Green */
+            background-color: #00b14f;
             color: white;
         }
 
         .btn-whatsapp {
-            background-color: #25d366; /* WhatsApp Green */
+            background-color: #25d366;
             color: white;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-            opacity: 0.9;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            opacity: 0.95;
         }
 
-        /* Section Styling */
+        .arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* Sections */
         section {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 35px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 2px dashed #e0dcd3;
+            margin: 25px 0;
         }
 
         h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-text {
+            text-align: center;
+            color: #555;
+            font-size: 1.05rem;
         }
 
         /* Menu Section */
         .menu-list {
             list-style: none;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .menu-item {
-            padding: 10px 0;
-            border-bottom: 1px dashed #ddd;
+            padding: 12px 0;
+            border-bottom: 1px dashed #eee;
             font-size: 1.2rem;
             font-weight: 600;
+            display: flex;
+            justify-content: space-between;
         }
+        
         .menu-item:last-child {
             border-bottom: none;
         }
 
         /* Gallery Section */
         .gallery {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
 
         .gallery-item {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            display: block;
         }
 
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
-
-        /* Features Section */
-        .features-grid {
+        /* Features Styling */
+        .features {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto;
         }
 
         .feature-card {
-            background: #f9f9f9;
-            padding: 15px;
+            background: #fdfbf7;
+            padding: 12px;
             border-radius: 8px;
             border-left: 4px solid var(--primary-color);
             font-weight: bold;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
         }
 
-        /* Info Style for Contact/Map */
-        .info-text {
+        /* Contact & Info */
+        .info-block {
+            text-align: center;
             font-size: 1.1rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .map-responsive {
-            overflow:hidden;
-            padding-bottom:56.25%;
-            position:relative;
-            height:0;
-            border-radius: 10px;
-            margin-top: 15px;
+        .info-block a {
+            color: var(--text-color);
+            text-decoration: none;
         }
-        .map-responsive iframe {
-            left:0;
-            top:0;
-            height:100%;
-            width:100%;
-            position:absolute;
-            border:0;
+
+        .hours-block {
+            background: #fdfbf7;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            margin: 15px auto 0 auto;
+            border: 1px solid #eee;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
+            padding-top: 10px;
+            color: #999;
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -211,24 +233,29 @@
             
             <div class="cta-buttons">
                 <a href="#" class="btn btn-grab">💚 Order on Grab</a>
-                <a href="https://wa.me/6586696811" class="btn btn-whatsapp" target="_blank">💬 WhatsApp Us</a>
+                <a href="https://wa.me/6586696811" class="btn btn-whatsapp" target="_blank">💬 WhatsApp</a>
             </div>
+            <div class="arrow">↓↓↓</div>
         </header>
 
         <!-- About Us -->
         <section id="about">
             <h2>About Us</h2>
-            <p>Welcome to Chan Muslim Kitchen! We are proudly Muslim-owned and dedicated to bringing you the finest homemade traditional dishes prepared with love and the freshest ingredients. Taste the rich, authentic heritage in every bite.</p>
+            <p class="about-text">Welcome to Chan Muslim Kitchen! We are proudly Muslim-owned and dedicated to bringing you the finest homemade traditional dishes prepared with love and care.</p>
         </section>
+
+        <hr class="divider">
 
         <!-- Signature Menu -->
         <section id="menu">
             <h2>Signature Menu</h2>
             <ul class="menu-list">
-                <li class="menu-item">🍜 Sarawak Laksa</li>
-                <li class="menu-item">🍜 Lor Mee</li>
+                <li class="menu-item"><span>🍜 Sarawak Laksa</span></li>
+                <li class="menu-item"><span>🍜 Lor Mee</span></li>
             </ul>
         </section>
+
+        <hr class="divider">
 
         <!-- Food Gallery -->
         <section id="gallery">
@@ -236,14 +263,18 @@
             <div class="gallery">
                 <img src="laksa.jpeg" alt="Sarawak Laksa" class="gallery-item">
                 <img src="lormee.jpeg" alt="Lor Mee" class="gallery-item">
-                <img src="logo.jpeg" alt="Chan Muslim Kitchen Featured Banner" class="gallery-item">
+                <img src="CurrySardinePuff.png" alt="Curry Puff & Sardine Puff" class="gallery-item">
+                <img src="sambal pau goreng.jpeg" alt="Sambal Pau Goreng" class="gallery-item">
+                <img src="barley.jpeg" alt="Homemade Barley" class="gallery-item">
             </div>
         </section>
+
+        <hr class="divider">
 
         <!-- Why Choose Us -->
         <section id="why-choose-us">
             <h2>Why Choose Us</h2>
-            <div class="features-grid">
+            <div class="features">
                 <div class="feature-card">✔ Muslim Owned</div>
                 <div class="feature-card">✔ Homemade</div>
                 <div class="feature-card">✔ Fresh Ingredients</div>
@@ -251,25 +282,29 @@
             </div>
         </section>
 
+        <hr class="divider">
+
         <!-- Google Map -->
         <section id="location">
-            <h2>Our Location</h2>
-            <p class="info-text">📍 <strong>Address:</strong> Blk 372 Hougang Street 31</p>
-            <div class="map-responsive">
-                <iframe src="https://maps.google.com/maps?q=Blk%20372%20Hougang%20Street%2031&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
-            </div>
+            <h2>Google Map</h2>
+            <div class="info-block">📍 Blk 372 Hougang Street 31</div>
         </section>
+
+        <hr class="divider">
 
         <!-- Contact -->
         <section id="contact">
-            <h2>Contact & Opening Hours</h2>
-            <p class="info-text">📞 <strong>Phone:</strong> <a href="tel:86696811" style="color: var(--text-color);">86696811</a></p>
-            <p class="info-text">✉ <strong>Email:</strong> <a href="mailto:chanmuslimkitchen@gmail.com" style="color: var(--text-color);">chanmuslimkitchen@gmail.com</a></p>
-            <p class="info-text" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee;">
-                ⏳ <strong>Opening Hours:</strong><br>
-                Saturday & Sunday: 8:30 AM - 5:30 PM
-            </p>
+            <h2>Contact</h2>
+            <div class="info-block">📞 <a href="tel:+6586696811">+65 8669 6811</a></div>
+            <div class="info-block">✉ <a href="mailto:chanmuslimkitchen@gmail.com">chanmuslimkitchen@gmail.com</a></div>
+            
+            <div class="hours-block">
+                ⏳ <strong>Saturday & Sunday</strong><br>
+                8:30 AM - 5:30 PM
+            </div>
         </section>
+
+        <hr class="divider">
 
         <!-- Footer -->
         <footer>
